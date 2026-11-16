@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Explore political ideas, understand policy differences and discover your political profile in Malaysia.">
+  <title>Political Compass — Understand Where You Stand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Political Compass home">
+      <span class="brand-name">Political Compass</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#test" data-i18n="navTest">Political Test</a>
+      <a href="#ideologies" data-i18n="navIdeas">Ideologies</a>
+      <a href="#policies" data-i18n="navPolicies">Policy Explorer</a>
+      <a href="#parties" data-i18n="navParties">Party Comparison</a>
+      <a href="#elections" data-i18n="navElections">Election Center</a>
+      <a href="#agong" data-i18n="navAgong">Yang di-Pertuan Agong</a>
+      <a href="#about" data-i18n="navAbout">About</a>
+    </nav>
+
+    <div class="top-actions">
+      <div class="language-control" role="group" aria-label="Choose language">
+        <span class="language-globe" aria-hidden="true"></span>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button class="language-option active" type="button" data-language="en" aria-pressed="true">EN</button>
+          <button class="language-option" type="button" data-language="zh-CN" aria-pressed="false">中文</button>
+          <button class="language-option" type="button" data-language="ms" aria-pressed="false">BM</button>
+        </div>
+        <select id="languageSelect" class="language-native-select" aria-label="Select language" tabindex="-1">
+          <option value="en">EN</option>
+          <option value="zh-CN">中文</option>
+          <option value="ms">BM</option>
+        </select>
+      </div>
+
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle appearance">
+        <span aria-hidden="true">◐</span>
+      </button>
+
+      <button class="menu-button" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <h1 data-i18n="heroTitle">Political Compass</h1>
+        <p data-i18n="heroText">An independent space to explore political ideas, understand public policies and discover different perspectives.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#test" data-i18n="startTest">Start Political Test</a>
+          <a class="button button-glass" href="#ideologies" data-i18n="exploreIdeas">Explore Ideas</a>
+        </div>
+        <p class="small-note" data-i18n="heroNote">Educational and informational. Not a voting recommendation.</p>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section intro-section">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="introEyebrow">A SPACE TO EXPLORE</span>
+        <h2 data-i18n="introTitle">Politics is more than one point of view.</h2>
+        <p data-i18n="introText">Understand the ideas, policies and institutions that shape Malaysia.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">◎</span>
+          <h3 data-i18n="feature1Title">Discover your perspectives</h3>
+          <p data-i18n="feature1Text">Reflect on your views across economic, social, governance and global issues.</p>
+          <a href="#test" data-i18n="learnMore">Learn more →</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">◇</span>
+          <h3 data-i18n="feature2Title">Explore political ideas</h3>
+          <p data-i18n="feature2Text">Learn about political philosophies, their principles, histories and criticisms.</p>
+          <a href="#ideologies" data-i18n="learnMore">Learn more →</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">▤</span>
+          <h3 data-i18n="feature3Title">Compare public policies</h3>
+          <p data-i18n="feature3Text">Examine policy proposals and compare publicly available party positions.</p>
+          <a href="#policies" data-i18n="learnMore">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- POLITICAL TEST -->
+    <section class="section tinted-section" id="test">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="testEyebrow">POLITICAL SELF-REFLECTION</span>
+        <h2 data-i18n="testTitle">Discover your political profile.</h2>
+        <p data-i18n="testIntro">Answer a series of statements. There are no right or wrong answers.</p>
+      </div>
+
+      <div class="test-panel" id="testPanel">
+        <div class="test-start" id="testStart">
+          <div class="test-meta">
+            <span class="pill">12 dimensions</span>
+            <span class="pill">120 questions</span>
+            <span class="pill">3 languages</span>
+          </div>
+
+          <h3 data-i18n="testStartTitle">A broader look at your views.</h3>
+          <p data-i18n="testStartText">The test covers government, economy, taxation, welfare, democracy, civil liberties, society, justice, security, foreign policy, environment and technology.</p>
+
+          <button class="button button-dark" id="beginTest" data-i18n="begin">Begin</button>
+          <p class="small-note" data-i18n="privacyNote">Your answers stay in this browser in this demo. Avoid using a shared device if you want to keep them private.</p>
+        </div>
+
+        <div class="test-question hidden" id="testQuestion">
+          <div class="question-top">
+            <span class="question-category">
+              <span class="category-dot"></span>
+              <span id="questionCategory">Government</span>
+            </span>
+            <span class="question-counter">
+              <strong id="questionCounter">1 / 120</strong>
+              <span class="question-progress-label" id="questionPercent">1%</span>
+            </span>
+          </div>
+
+          <div class="progress-track" role="progressbar" aria-label="Question progress" aria-valuemin="0" aria-valuemax="120" aria-valuenow="1" id="questionProgress">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="question-content" id="questionContent">
+            <span class="question-kicker">YOUR VIEW</span>
+            <h3 id="questionText"></h3>
+            <p class="answer-hint" id="answerHint">Choose the response that best reflects your view. The next question appears automatically.</p>
+            <div class="answer-list" id="answerList"></div>
+          </div>
+
+          <div class="question-actions">
+            <button class="button button-glass" id="previousQuestion" data-i18n="previous">Previous</button>
+            <button class="button button-glass skip-button" id="skipQuestion" data-i18n="skip">Skip</button>
+          </div>
+        </div>
+
+        <div class="test-result hidden" id="testResult">
+          <span class="eyebrow" data-i18n="resultEyebrow">YOUR REFLECTION</span>
+          <h3 data-i18n="resultTitle">Your political profile</h3>
+          <p id="resultSummary"></p>
+          <div id="resultDimensions" class="dimension-results"></div>
+          <p class="small-note" data-i18n="resultDisclaimer">This is an educational reflection, not a scientific diagnosis or a recommendation about whom to vote for.</p>
+          <button class="button button-dark" id="restartTest" data-i18n="restart">Retake test</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDEOLOGIES -->
+    <section class="section" id="ideologies">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="ideasEyebrow">POLITICAL PHILOSOPHY</span>
+        <h2 data-i18n="ideasTitle">Ideas that shape political thought.</h2>
+        <p data-i18n="ideasText">An introduction to influential political traditions and their different approaches to society.</p>
+      </div>
+      <div class="content-grid" id="ideologyGrid"></div>
+    </section>
+
+    <!-- POLICY EXPLORER -->
+    <section class="section tinted-section" id="policies">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="policyEyebrow">PUBLIC POLICY</span>
+        <h2 data-i18n="policyTitle">Explore the issues that matter.</h2>
+        <p data-i18n="policyText">Understand policy areas, questions and trade-offs in public decision-making.</p>
+      </div>
+
+      <div class="filter-row">
+        <input id="policySearch" type="search" placeholder="Search policies..." aria-label="Search policies">
+        <select id="policyFilter" aria-label="Filter policies">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+
+      <div class="content-grid" id="policyGrid"></div>
+    </section>
+
+    <!-- PARTY COMPARISON -->
+    <section class="section" id="parties">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="partyEyebrow">MALAYSIAN POLITICS</span>
+        <h2 data-i18n="partyTitle">Compare political parties.</h2>
+        <p data-i18n="partyText">Compare published positions using transparent sources. Missing information is shown clearly.</p>
+      </div>
+
+      <div class="comparison-panel">
+        <div class="party-selectors">
+          <label>
+            <span data-i18n="selectParty1">Party 1</span>
+            <select id="partyOne"></select>
+          </label>
+          <label>
+            <span data-i18n="selectParty2">Party 2</span>
+            <select id="partyTwo"></select>
+          </label>
+        </div>
+
+        <div id="partyComparison" class="comparison-results"></div>
+        <p class="small-note" data-i18n="partyDisclaimer">This comparison presents documented information, not an endorsement or voting recommendation.</p>
+      </div>
+    </section>
+
+    <!-- ELECTION CENTER -->
+    <section class="section tinted-section" id="elections">
+      <div class="section-heading">
+        <span class="eyebrow election-eyebrow" data-i18n="electionEyebrow">DEMOCRATIC PROCESS</span>
+        <h2 data-i18n="electionTitle">Malaysia Election Center.</h2>
+        <p data-i18n="electionText">Learn about general elections, state elections, by-elections and the electoral process.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">▦</span>
+          <h3 data-i18n="election1Title">General Elections</h3>
+          <p data-i18n="election1Text">Explore the role of Parliament and the process of electing federal representatives.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">⌂</span>
+          <h3 data-i18n="election2Title">State Elections</h3>
+          <p data-i18n="election2Text">Understand state legislative assemblies and state-level representation.</p>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">↻</span>
+          <h3 data-i18n="election3Title">By-Elections</h3>
+          <p data-i18n="election3Text">Learn why a by-election takes place and how a vacant seat is filled.</p>
+        </article>
+      </div>
+
+      <div class="source-note">
+        <strong data-i18n="officialSource">Official election information</strong>
+        <p data-i18n="sourceText">For verified election dates, results and constituency information, consult Malaysia's Election Commission.</p>
+        <a href="https://www.spr.gov.my/" target="_blank" rel="noopener">Suruhanjaya Pilihan Raya Malaysia ↗</a>
+      </div>
+    </section>
+
+    <!-- YANG DI-PERTUAN AGONG -->
+    <section class="section agong-section" id="agong">
+      <div class="agong-heading">
+        <span class="eyebrow" data-i18n="agongEyebrow">THE FEDERAL CONSTITUTION</span>
+        <h2 data-i18n="agongTitle">Yang di-Pertuan Agong</h2>
+        <p data-i18n="agongSubtitle">The constitutional monarch and Head of State of Malaysia.</p>
+      </div>
+
+      <div class="agong-portrait-wrap">
+        <div class="agong-portrait-frame">
+          <img
+            id="agongPortrait"
+            src="https://www.istananegara.gov.my/v1/images/2025/09/30/potret-rasmi-ydpa.jpg"
+            alt="Official portrait of the Yang di-Pertuan Agong"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="agong-photo-caption">
+          <span id="agongPhotoLabel" data-i18n="agongOfficialPortrait">Official portrait</span>
+          <span class="agong-photo-counter" id="agongPhotoCounter">01 / 02</span>
+        </div>
+
+        <button class="agong-switch-button" id="agongPhotoToggle" type="button">
+          <span data-i18n="agongSwitchPhoto">View another portrait</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+
+      <div class="agong-info">
+        <article class="agong-info-card">
+          <span class="agong-card-number">01</span>
+          <h3 data-i18n="agongRoleTitle">Constitutional position</h3>
+          <p data-i18n="agongRoleText">The Yang di-Pertuan Agong is Malaysia's constitutional monarch and Head of State. The office is established under Article 32 of the Federal Constitution.</p>
+        </article>
+
+        <article class="agong-info-card">
+          <span class="agong-card-number">02</span>
+          <h3 data-i18n="agongElectionTitle">Election and term</h3>
+          <p data-i18n="agongElectionText">The Yang di-Pertuan Agong is elected by the Conference of Rulers from among the Malay Rulers. The term of office is five years, subject to the Constitution.</p>
+        </article>
+
+        <article class="agong-info-card">
+          <span class="agong-card-number">03</span>
+          <h3 data-i18n="agongFunctionTitle">Constitutional functions</h3>
+          <p data-i18n="agongFunctionText">The office carries out constitutional functions, including appointing the Prime Minister in accordance with the Constitution and performing formal functions in Parliament.</p>
+        </article>
+      </div>
+
+      <div class="agong-sources">
+        <span data-i18n="agongSourcesTitle">Official references</span>
+        <a href="https://www.istananegara.gov.my/" target="_blank" rel="noopener">Istana Negara ↗</a>
+        <a href="https://www.parlimen.gov.my/" target="_blank" rel="noopener">Parliament of Malaysia ↗</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="aboutEyebrow">ABOUT THIS PROJECT</span>
+        <h2 data-i18n="aboutTitle">Independent. Informative. Transparent.</h2>
+        <p data-i18n="aboutText">Political Compass is designed as an educational platform for exploring political ideas and public information in Malaysia.</p>
+      </div>
+
+      <div class="about-grid">
+        <article>
+          <h3 data-i18n="principle1Title">Political neutrality</h3>
+          <p data-i18n="principle1Text">The platform does not promote a political party, candidate or ideology.</p>
+        </article>
+
+        <article>
+          <h3 data-i18n="principle2Title">Source transparency</h3>
+          <p data-i18n="principle2Text">Political claims and policy positions should be linked to identifiable sources and dates.</p>
+        </article>
+
+        <article>
+          <h3 data-i18n="principle3Title">Room for complexity</h3>
+          <p data-i18n="principle3Text">Political views can be mixed, uncertain or changing. A single label cannot describe every person.</p>
+        </article>
+      </div>
+
+      <p class="method-note" data-i18n="methodText">The political test is an educational self-reflection tool. Its dimensions and scoring model are simplified and should not be treated as a validated psychological or scientific instrument.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><span>Political Compass</span></a>
+    <p data-i18n="footerText">An independent space for political learning and understanding.</p>
+    <span>Malaysia · <span id="year"></span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
